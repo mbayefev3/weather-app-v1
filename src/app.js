@@ -94,22 +94,6 @@ app.get('/weather', (req, res) => {
 
 
 
-// app.get('/products', (req, res) => {
-
-//     if (!req.query.search) {
-
-//         return res.send({
-//             error: 'You must provide a search term'
-//         })
-//     }
-//     // we cant response twice
-
-//     console.log(req.query)
-
-//     res.send({
-//         product: []
-//     })
-// })
 app.get('/help/*', (req, res) => {
 
     res.render('404page', {
@@ -127,8 +111,5 @@ app.get('*', (req, res) => {
 app.listen(3000, () => {
     console.log('server is up on port 3000.')
 })
-// app.com
-// app.com/help
-// app.com/about
 
 
