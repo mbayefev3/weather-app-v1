@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = data.error
             } else {
                 messageOne.textContent = data.location
-                messageTwo.textContent = data.forecast.data
+                messageTwo.textContent = `${data.forecast.data}. and the ${data.time}`
                 search.value = ''
                 console.log('data', data.forecast)
             }

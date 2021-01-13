@@ -16,7 +16,8 @@ const forecast = (long, lat, callback) => {
         } else {
 
             callback(undefined, {
-                data: ` ${response.body.current.weather_descriptions[0]} It is currently ${response.body.current.temperature} degrees out. and there is a ${response.body.current.feelslike} chance of raining`
+                data: ` ${response.body.current.weather_descriptions[0]} It is currently ${response.body.current.temperature} degrees out. and there is a ${response.body.current.feelslike} chance of raining`,
+                time: `the time zone is : ${response.body.location.timezone_id}`
             })
         }
 
