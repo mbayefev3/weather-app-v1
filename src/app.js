@@ -14,6 +14,8 @@ const forecast = require('./utils/forecast')
 // static takes the path to the server we want to serve up
 
 const app = express();
+
+const port = process.env.PORT || 3000
 // Define paths for Express Config
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -108,8 +110,10 @@ app.get('*', (req, res) => {
         error: 'Page not found'
     })
 })
-app.listen(3000, () => {
-    console.log('server is up on port 3000.')
+
+
+app.listen(port, () => {
+    console.log('server is up on port ' + port)
 })
 
 
